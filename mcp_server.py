@@ -42,7 +42,7 @@ def send_text_message(text_content: str) -> str:
     # Set up Surge API client and send text message
     with httpx.Client() as client:
         response = client.post(
-            "https://api.surgemsg.com/messages",
+            "https://api.surge.app/messages",
             headers={
                 "Authorization": f"Bearer {surge_config['api_key']}",
                 "Surge-Account": surge_config["account_id"],
